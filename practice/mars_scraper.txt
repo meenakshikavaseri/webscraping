@@ -1,0 +1,8 @@
+from bs4 import BeautifulSoup as bs
+import requests
+import pymongo
+import pandas as pd
+from splinter import Browser
+import re
+
+print("hello")

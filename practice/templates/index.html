@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mission to Mars</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        
+        <div class="jumbotron text-center">
+            <h1>Mission to Mars</h1>
+            <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Update</a></p>
+        </div>
+            
+        <div class="row">
+            <div class="col-sm-12 col-md-8">
+                <h3 class="heading"><strong>Latest Mars News</strong></h3>
+                <p>
+                    <strong>{{data.Headline}}</strong>
+                    <br> 
+                    {{data.News}}
+                </p>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <br>
+                <br>
+                <strong>Weather on Mars</strong>
+                <p>{{data.Weather.MarsWeather}}</p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-sm-12 col-md-8">
+                <h3 class="heading"><strong>Featured Mars Image</strong></h3>
+                <img src={{data.Image}} style="max-width:95%; height:auto; margin-left:auto;margin-right:auto; display:block;">
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <br>
+                <br>
+                <h4><strong>Planet Profile:</strong></h4>
+                
+                {{data.Profile}}
+                
+                <br>
+                <br>
+                <h4><strong>Facts About Mars:</strong></h4>
+               {{data.Table}}
+            </div>
+        </div>
+
+        <div class="row text-center">
+            <h2><strong>Latest Hemisphere Images:</strong></h2>
+            <div class="col-sm-12 col-md-6">
+                <br>
+                <h4><strong>{{data.Hemisphere[0].title}}</strong></h4>
+                <img src={{data.Hemisphere[0].img_url}} style="max-width:95%; height:auto; margin-left:auto;margin-right:auto; display:block;">
+                <br>
+                <br>
+                <h4><strong>{{data.Hemisphere[1].title}}</strong></h4>
+                <img src={{data.Hemisphere[1].img_url}} style="max-width:95%; height:auto; margin-left:auto;margin-right:auto; display:block;">
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <br>
+                <h4><strong>{{data.Hemisphere[2].title}}</strong></h4>
+                <img src={{data.Hemisphere[2].img_url}} style="max-width:95%; height:auto; margin-left:auto;margin-right:auto; display:block;">
+                <br>
+                <br>
+                <h4><strong>{{data.Hemisphere[3].title}}</strong></h4>
+                <img src={{data.Hemisphere[3].img_url}} style="max-width:95%; height:auto; margin-left:auto;margin-right:auto; display:block;">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
